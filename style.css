@@ -1,0 +1,521 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    font-family: "face";
+    src: url("./Font/Charm-Bold.ttf");
+}
+@font-face {
+    font-family: "LogoF";
+    src: url("./Font/Arizonia/Arizonia-Regular.ttf");
+}
+html, body{
+    width: 100%;
+}
+body{
+    background-image: url("./images/High_resolution_wallpaper_background_ID_77700348250.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center; 
+}
+ul{
+    list-style-type: none;
+}
+.dropdown-menu a, footer a{
+    text-decoration: none;
+}
+header{
+    width: 100%;
+    height: 5rem;
+    margin: 0 auto;
+}
+   .meni{
+    display: none;
+   }
+.dropdown{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.dropdown #logo{
+    grid-column: 1/2;
+}
+.dropdown #logo h5{
+    font-family: "LogoF";
+    position: fixed;
+ padding-left: 1.5rem;
+ padding-top: 2rem;
+    font-weight: 800;
+    font-size: 4rem;
+} 
+#toogle{
+    display: none;
+}
+#lbl{
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.grid-box .right{
+    margin-top: -30rem;
+    grid-column: 11/12;
+   
+}
+.grid-box .right img{
+    width: 150px;
+  position: absolute;
+  opacity: 0;
+}
+.grid-box .right .prva{
+    animation: rolaj 10s infinite 1s ease-in-out;
+    
+}
+.grid-box .right .druga{
+    animation: rolaj 10s infinite 3s ease-in-out ;
+}
+.grid-box .right .treca{
+    animation: rolaj 10s infinite 5.5s ease-in-out ;
+}
+.grid-box .right .cetvrta{
+    animation: rolaj 10s infinite 8s ease-in-out ;
+}
+@keyframes rolaj {
+    0% {
+        opacity: 0;
+    transform: scale(0.8) translate(0%, 50%);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1.2) translate(0%, 100%);
+      }
+      50% {
+        opacity: 0;
+        transform: scale(0.8) translate(0%, 300%);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.8) translate(0%, 300%);
+      }
+    
+}
+.grid-box{
+    width: 100%;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+   padding-top: 1rem;
+   align-items: center;
+}
+.grid-box .left svg, img{
+    width: 2rem;
+}
+.grid-box .left{
+    grid-column: 1/2;
+    gap: 3rem;
+    position: fixed;
+    padding-left: 1.5rem ;
+    padding-top: 10rem;
+    align-content: center;
+    grid-template-columns: 1fr;
+  
+}
+.dropdown #logo{
+    animation: naslov 5s infinite;
+    color: lightgray;
+}
+.grid-box .center{
+    grid-column: 5 /span 5;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 3rem;
+    
+}
+@keyframes naslov {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+.grid-box .center h1{
+    padding-left: 100px;
+    font-family: "face";
+    font-size: 4rem;
+    font-weight: 800;
+    color: black;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px blue;
+    animation-name: prikaz;
+    animation-duration: 15s;
+    scale: 0;
+}
+@keyframes prikaz {
+    50% {text-shadow: 10px 20px 30px blue, 0 0 25px blueviolet, 0 0 5px blue;
+         scale:1 1;
+        }
+    100%{text-shadow: 10px 20px 30px blue, 0 0 25px blueviolet, 0 0 5px blue;
+        scale:0 1;
+    }    
+}
+.grid-box .center h3{
+    padding-left: 80px;
+    font-family: "face";
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px blue;
+    animation-name: prikaz;
+    animation-duration: 15s;
+    animation-delay: 2s;
+    scale: 0;
+}
+footer{
+position: sticky;
+top: 710px;
+height: 2.5rem;
+display: flex;
+justify-content: center;
+gap: 3rem;
+align-items: center;
+text-transform: uppercase;
+font-weight: 500;
+opacity: 0.5;
+background-color: rgba(245, 245, 220, 0.259);
+color: darkblue;
+}
+footer .socialNetwork{
+    display: none;
+}
+footer a:hover{
+    animation: footer 2s ease-out;
+}
+@keyframes footer {
+    50% {text-shadow: 10px 10px 1px rgb(9, 9, 36);}
+}
+/* about me */
+
+.grid-box-about{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    height: 75vh;
+    margin-top: 10rem;
+}
+.grid-box-about .img{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.grid-box-about .img img{
+    width: 50%;
+    border-radius: 30%;
+    border:20px solid rgba(230, 171, 142, 0.345);
+}
+.grid-box-about .oMeni h1{
+    color: lightgray;
+    padding-left: 7rem;
+}
+.grid-box-about .oMeni{
+    display: grid;
+    /* justify-items: center; */
+    gap: 2rem;
+}
+.grid-box-about .oMeni p{
+    width: 70%;
+    font-weight: 500;
+    font-size: 1rem;
+    color: lightgoldenrodyellow;
+    text-align: center;
+}
+.anim p{
+    letter-spacing: 1px;
+    animation: pokretanjeSlova 6s linear 20s;
+    animation-timing-function:ease-in;
+}
+
+@keyframes pokretanjeSlova {
+    80%{
+        letter-spacing: 15px;
+    }
+}
+/* projects */
+
+.projects{
+    margin-top: 8rem;
+}
+.projects h1{
+    margin-bottom: 1rem;
+}
+.naslov h1, p{
+    color: lightgray;
+}
+
+.grid-3-column-center{
+    max-width: 35%;
+    max-height: 50%;
+    padding: 5px;
+    margin: 1rem auto;
+}
+.imageContainer{
+    position: relative;
+    width: 100%;
+}
+.imageContainer img{
+    width: 100%;
+}
+.leva{
+    top: 45%;
+    left: -80px;
+}
+.desna{
+    top: 45%;
+    right: -80px;
+}
+.leva, .desna{
+    position: absolute;
+    font-size: 4rem;
+   z-index: 1;
+   padding: 15px;
+   font-weight: bold;
+   color: lightgray;
+   height: 10%;
+}
+.leva:hover, .desna:hover{
+    color: rgb(78, 75, 75);
+}
+.dugmici{
+    padding-top: 10%;
+    text-align: center;
+}
+.start, .stop{
+   display: inline-block;
+   cursor: pointer;
+padding: 3% auto;
+width: 50px;
+border-radius: 5px;
+border-bottom-color: 1.5px solid black;
+border-right-color: 1.5px solid black;
+background-color: lightgray;
+}
+.dots{
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    background-color: lightgray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 4px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.active{
+    background-color: rgb(78, 75, 75);
+}
+
+/* kontakt */
+.contact{
+    margin-top: 10rem;
+    padding-bottom: 5rem;
+}
+.naslov-contact h1{
+    text-align: center;
+    padding-bottom: 1rem;
+    /* padding-top: auto; */
+    color: lightgray;
+    font-size: 2rem;
+}
+.forma-grid-2-column{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    padding-bottom: 3rem;
+    border: 5px solid brown;
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgba(198, 44, 67, 0.379);
+    border-radius: 20px;
+}
+
+.forma-left{
+grid-column: 2 / span 4;
+border: 5px solid brown;
+background-color: lightgray;
+border-radius: 20px;
+width: 100%;
+margin: 2rem 0;
+display: grid;
+justify-items: center;
+/* max-height: 65vh; */
+}
+.forma-left p{
+    color: rgba(13, 110, 253);
+}
+.forma-left h3{
+    color: rgb(111, 109, 109);
+    padding-top: 1.5rem;
+    height: 2rem;
+    margin: 0 auto;
+    /* line-height: 1rem; */
+}
+.forma-left h5{
+    color: rgb(111, 109, 109);
+}
+.forma-right{
+    grid-column: 7/ span 4;
+    margin: 2rem 0;
+    border: 5px solid brown;
+background-color: lightgray;
+border-radius: 20px;
+padding: 1rem;
+}
+.forma-right .inp, textarea{
+    border-radius: 10px;
+    border: none;
+}
+.forma-right .inp{
+    width: 13rem;
+    height: 2.5rem;
+}
+.forma-box{
+    padding: 0.5rem 0;
+}
+.forma-btn{
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+}
+.forma-btn button{
+  border-radius: 12px;
+  font-size: 90%;
+  padding: 3%;
+  border: none;
+}
+.forma-left .call p, h5{
+    text-align: center;
+}
+.call{
+    padding-top: 1rem;
+    margin: 0 auto;
+    width: 100%;
+     display: grid;
+     justify-content:  center;
+}
+.call img{
+    width: 15%;
+   margin: 1rem auto;
+}
+form .poruka{
+    padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+    .grid-box .left, .right {
+        display: none;
+    }
+    #toogle:checked+.meni{
+        display: block;
+    }
+    #lbl{
+        display: inline;
+        position: fixed;
+        top: 10px;
+        right: 30px;
+    }
+    .meni{
+         align-items: center;
+        height: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        opacity: 0.5;
+        position: fixed;
+        top: 17px;
+        right: 80px;
+       
+    }
+    .meni a{
+        text-decoration: none;
+        padding-left: 10px;
+    }
+    .meni a:hover{
+        animation: footer 4s ease-out;
+    }
+    .dropdown #logo h5{
+        padding-left: 1rem;
+        padding-top: 1rem;
+        font-size: 2.5rem;
+    } 
+    /* about me */
+    .grid-box{
+        margin: 0;
+    }
+    .grid-box .center{
+        grid-column: 3/ span 8;
+    }
+    .grid-box .center h1{
+        padding-left: 11rem;
+        font-size: 2rem;
+        animation-name: prikaz;
+        animation-duration: 10s;
+        scale: 0;
+    }
+    .grid-box-about .oMeni h1{
+        padding-left: 0;
+    }
+    .grid-box-about .oMeni p{
+        text-align:left;
+        animation: pokretanjeSlova 0s linear 20s;
+    }
+    /* project */
+    .projects{
+        margin-top: 17rem;
+    }
+    .grid-3-column-center{
+        display: flex;
+       flex-wrap: wrap;
+    }
+    .dugmici{
+        padding-left: 30%;
+        padding-top: 20%;
+    }
+
+    /* contact */
+    .forma-grid-2-column, .forma-left, .forma-right{
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        justify-content: center;
+    }
+    .forma-right{
+        margin: 0 auto;
+    }
+    footer{
+        justify-content: flex-start;
+        font-size: 0.8rem;
+        gap: 0.5rem;
+    }
+    footer a{
+        padding-left: 2%;
+    }
+    footer img, svg{
+        width: 1.5rem;
+    }
+    footer .socialNetwork{
+        display: flex;
+        flex-direction: row;
+       justify-content: flex-end;
+        gap: 0.5rem;
+     width: 50%;
+
+    }
+    
+}
+
+
+
+
+
+
